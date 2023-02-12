@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import "./styles.css";
 
-import Title from "./Title";
+
 import NavBar from "./NavBar";
 
 import Login from "./Login";
@@ -11,18 +11,14 @@ import Home from "./Home";
 import Account from './Account';
 
 
-
-
 function App() {
-  const [page, setPage] = useState("/")
+  document.body.style.backgroundColor = "rgb(201, 231, 219)"
 
   return (
     <div className="app">
-    <Title />
-    <NavBar onChangePage={setPage} />
-      <Switch> 
-        <Route path="/login" element={<Login/>}/>
-
+    <NavBar/>
+      <Routes> 
+        <Route path="/" exact={<Login/>}/>
         <Route path="/home" element={<Home/>}/>
 
         {/* <Route path= "/create" element={<Create/>}/> */}
@@ -31,11 +27,8 @@ function App() {
       
         <Route path="/account" element={<Account/>}/>
         
-        {/* <Route path= "*" element={<h1> Not Found </h1>}/> */}
-        
-      </Switch>   
-      
-
+        <Route path= "*" element={<h1> Not Found </h1>}/>        
+      </Routes>   
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
-import { Switch, Route } from "react-router-dom";
-import { useHistory } from 'react-router'
+import { Routes, Route } from "react-router-dom";
+import { useNavigate } from 'react-router'
 import SignUp from "./SignUp";
 
 function Login() {
@@ -12,7 +12,7 @@ function Login() {
     })
 
     const [errors, setErrors] =useState([])
-    const history = useHistory()
+    const navigate = useNavigate();
 
 
     function handleLoginSubmit(e){
@@ -30,7 +30,7 @@ function Login() {
         .then(res => {
             if(res.ok){
                 res.json().then(user => {
-                    history.push(`/account/${user.id}`)
+                    navigate(`/account/${user.id}`)
                 })
             }else {
                 res.json().then(json => setErrors(json.error))
@@ -63,9 +63,9 @@ function Login() {
 
         <button className='loginSubmit' type='submit'>Login!</button>
 
-        <Switch>
+        <Routes>
         <Route path="/signup" element={<SignUp/>}/>
-        </Switch>
+        </Routes>
 
         </form>
         {errors&&<div>{errors}</div>}

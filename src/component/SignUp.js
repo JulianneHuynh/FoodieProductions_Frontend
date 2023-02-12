@@ -1,5 +1,5 @@
 import React,  {useState} from 'react'
-import {useHistory} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 // import {Form} from '../styled/Form'
 
 function SignUp() {
@@ -10,7 +10,7 @@ function SignUp() {
       password:'',
   })
   const [errors, setErrors] = useState([])
-  const history = useHistory()
+  const navigate = useNavigate()
 
   const {firstName, lastName, email, password} = formData
 
@@ -31,7 +31,7 @@ function SignUp() {
     .then(res => {
       if(res.ok){
         res.json().then(user => {
-          history.push(`/users/${user.id}`)
+          navigate(`/users/${user.id}`)
         })
       }else {
         res.json().then(json => setErrors(Object.entries(json.errors)))
