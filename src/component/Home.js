@@ -28,9 +28,9 @@ export default function Home() {
   return (
     <div className='Home'>
       <br/>
-      <h1>home jhjhjgjgjhg page</h1>
+      <h1>About</h1>
       <br/>
-      <p>body & images</p>
+      <p>body text</p>
       <br/>
       <br/>
       <br/>

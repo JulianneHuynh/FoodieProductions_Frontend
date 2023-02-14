@@ -1,51 +1,16 @@
 import React, {useEffect} from "react";
 import {Link} from "react-router-dom";
 import "./NavBar.css";
-import jquery from "jquery";
+import $ from "jquery";
 
 
-function NavBar() {
-  // function animation (){
-  //   var tabsNewAnim = jquery('#navbarSupportedContent');
-  //   var activeItemNewAnim = tabsNewAnim.find('.active');
-  //   var activeWidthNewAnimHeight = activeItemNewAnim.innerHeight();
-  //   var activeWidthNewAnimWidth = activeItemNewAnim.innerWidth();
-  //   var itemPosNewAnimTop = activeItemNewAnim.position();
-  //   var itemPosNewAnimLeft = activeItemNewAnim.position();
-  //   jquery(".hori-selector").css({
-  //     "top":itemPosNewAnimTop.top + "px",
-  //     "left":itemPosNewAnimLeft.left + "px",
-  //     "height": activeWidthNewAnimHeight + "px",
-  //     "width": activeWidthNewAnimWidth + "px",
-  //   });
-  //   jquery("#navbarSupportedContent").on("click","li",function(e) {
-  //     jquery('#navbarSupportedContent ul li').removeClass("active");
-  //     jquery(this).addClass('active');
-  //     var activeWidthNewAnimHeight = jquery(this).innerHeight();
-  //     var activeWidthNewAnimWidth = jquery(this).innerWidth();
-  //     var itemPosNewAnimTop = jquery(this).position();
-  //     var itemPosNewAnimLeft = jquery(this).position();
-  //     jquery(".hori-selector").css({
-  //       "top":itemPosNewAnimTop.top + "px",
-  //       "left":itemPosNewAnimLeft.left + "px",
-  //       "height":activeWidthNewAnimHeight + "px",
-  //       "width":activeWidthNewAnimWidth + "px"
-  //     })
-  //   })
-  // };
+const NavBar = () => {
 
-  // useEffect(() => {
-    
-  //   animation();
-  //   jquery(window).on('resize', function() {
-  //     setTimeout(function(){ animation(); }, 500);
-  //   });
-  // },[]);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-mainbg">
-      <div className ="navbar-brand navbar-logo" >Foodie Productions</div> 
-      <img src="/images/icon" className="logo" alt=""/>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className ="Title">Foodie Productions</div> 
+      <img className="title-logo" src="/images/icon.png"/>
           <button 
             className="navbar-toggler" 
             type="button"
@@ -54,43 +19,63 @@ function NavBar() {
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"> 
-            <i className= "fas fa-bars text white"></i>
+            <span className="navbar-toggler-icon"></span>
           </button>
+          
+            <div className="collapse navbar-collapse"id="navbarSupportedContent">
+              <ul className="navbar-nav mr-auto">
 
-            <div 
-            className="collapse navbar-collapse"
-            id="navbarSupportedContent">
-              <ul className="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <Link class="nav-link" to="/home">Home <span class="sr-only"></span></Link>
+                </li>
 
-                  <div className="hori-selector">
-                    <div className="left"></div>
-                    <div className="right"></div>
+                <li class="nav-item dropdown">
+                  <Link 
+                    class="nav-link dropdown" 
+                    to="/create" id="navbarDropdown" 
+                    role="button" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false">
+                    Create Recipe
+                  </Link>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Create Cookbook</a>
+                    <a class="dropdown-item" href="#">Create Recipe Box</a>
                   </div>
+                </li>
 
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/home" exact>
-                      <i className="fas fa-tachometer-alt"></i>Home
-                    </Link>
-                  </li>
+                <li class="nav-item dropdown">
+                  <Link 
+                    class="nav-link dropdown" 
+                    to="archive"  id="navbarDropdown" 
+                    role="button" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false">
+                    Ar-Chives
+                  </Link>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Creations</a>
+                    <a class="dropdown-item" href="#">Collection</a>
+                  </div>
+                </li>
 
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/create" exact>
-                      <i className="fas fa-tachometer-alt"></i>Projects
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/archive" exact>
-                      <i className="fas fa-tachometer-alt"></i>Ar-Chives
-                    </Link>
-                  </li>
-
-                  <li className="nav-item">
-                    <Link className="nav-link" to="/account" exact>
-                      <i className="fas fa-tachometer-alt"></i>Profile
-                    </Link>
-                  </li>
-
+                <li class="nav-item dropdown">
+                  <Link 
+                    class="nav-link dropdown-hover" 
+                    to="/account" id="navbarDropdown" 
+                    role="button" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false">
+                    Profile
+                  </Link>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Account</a>
+                    <a class="dropdown-item" href="#">Sign Out</a>
+                  </div>
+                </li>
               </ul>
             </div>
 

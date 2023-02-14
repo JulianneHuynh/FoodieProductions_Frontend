@@ -1,26 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import AccountList from "./AccountList";
 
-const Account = ({ userId }) => {
-  const [user, setUser] = useState({});
+export default function Account(){
+  const [userDevises, setUserDevises]= useState([]);
 
-  useEffect(() => {
-    fetch(`/users/${userId}`)
-      .then(response => response.json())
-      .then(data => setUser(data));
-  }, [userId]);
+
+  useEffect(()=> {
+    fetch('http://localhost:3000/user_devises')
+    .then (r=> r.json())
+    .then (data => setUserDevises(data)) 
+  },[])
 
   return (
-    <div>
-      <img src={user.image} />
-      <h1>Welcome {user.firstName} {user.lastName}!</h1>
-      <p>Email: {user.email}</p>
+    <div className="Account">
+      <h1>jdlksajd</h1>
+      <br/>
+      <AccountList 
+              userDevises={userDevises}/>
     </div>
-    // maybe have logout button here
   );
 };
-
-export default Account;
-
-
-
 
