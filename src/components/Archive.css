@@ -1,0 +1,19 @@
+.Form-signup {
+  display:flex;
+  flex-direction:column;
+  width: 400px;
+  margin:auto;
+  font-family:Arial;
+  font-size:30px;
+}
+
+.Button-login {
+    background-color: rgb(201, 231, 219);
+    color: 0a5e38;
+    height:40px;
+    font-family:Arial;
+    font-size:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+  
+}

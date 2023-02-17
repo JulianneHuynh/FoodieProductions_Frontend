@@ -30,7 +30,7 @@ export default function Home() {
       <br/>
       <h1>About</h1>
       <br/>
-      <p>body text</p>
+      <p>The idea of this application is to create and store recipes, which would help preserve and organize recipes passed down through generations and shared with family members and friends. Home chefs can also create a recipe book to share with loved ones. The objective is to make this application user-friendly so that anyone can navigate through each step of creating their own masterpiece. We offer two options: a classic recipe cookbook and a traditional recipe card box, depending on the user's preference. Once the user creates an account, they will be able to create, edit/update, delete, and even add their recipes to their ar-chives.</p>
       <br/>
       <br/>
       <br/>

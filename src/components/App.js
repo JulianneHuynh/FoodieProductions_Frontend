@@ -4,38 +4,40 @@ import "./styles.css";
 
 
 import NavBar from "./NavBar";
-
-import Login from "./Archive";
 import Home from "./Home";
-// import Create from "./Create";
-import Archive from "./Archive";
-
+import Create from "./Create";
+// import Archive from "./Archive";
 import Profile from './Profile';
 import Account from './Account';
+import EditAccount from './EditAccount';
+import SignUp from './SignUp';
+import Login from './Login.js';
+// import Logout from './Logout';
 
 
 function App() {
-  document.body.style.backgroundColor = "rgb(201, 231, 219)"
-  
+  document.body.style.backgroundColor = "rgb(201, 231, 219)" 
   return (
     <div className="app">
     <NavBar/>
-      <Routes> 
-        <Route path="/" exact={<Login/>}/>
+      <Routes path="/" component={<Login/>}> 
         <Route path="/home" element={<Home/>}/>
 
-        {/* <Route path= "/create" element={<Create/>}/> */}
+        <Route path= "/create" element={<Create/>}/>
     
-        <Route path="/archive" element={<Archive/>}/>
+        {/* <Route path="/archive" element={<Archive/>}/> */}
       
         <Route path="/profile" element={<Profile/>}/>
-          <Route path="/account" element={<Account/>}/>
-        
+        <Route path="/account/" element={<Account/>}/>
+        <Route path="/" element={<Login/>}/>
+        <Route path="/edit_account" element={<EditAccount/>}/>
+        <Route exact path="/signup" element={<SignUp/>}/>
         <Route path= "*" element={<h1> Not Found </h1>}/>      
       </Routes>   
     </div>
-  );
+)
 }
+
 
 export default App;
 
