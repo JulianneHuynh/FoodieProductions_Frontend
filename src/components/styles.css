@@ -21,3 +21,64 @@
   text-align: center;
 }
 
+.cards {
+  padding: 5rem 0;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  text-align: center;
+  margin: 1rem;
+  box-shadow: 0 0 7px 0 #ddd;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  
+}
+
+.login-card {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center
+}
+
+.Account-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .img {
+  height: 50px;
+  width: 24px
+} */
+.image-account{
+  height: 200px;
+  width: 200px
+}
+
+
+.btn-group button {
+  background-color: #b8d6d9; /*background */
+  border: 1px solid rgb(0, 0, 0); /* border */
+  color: rgb(13, 145, 239); /* text */
+  padding: 10px 24px; /*padding */
+  cursor: pointer; /* Pointer/hand icon */
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+
+.btn-group button:hover {
+  background-color: #6ba381;
+}
+
+#form-container{
+  max-width: 75vw;
+
+}

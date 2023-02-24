@@ -42,8 +42,8 @@ const NavBar = () => {
                     Ar-Chives
                   </Link>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Creations</a>
-                    <a class="dropdown-item" href="#">Collection</a>
+                    <a class="dropdown-item" href="#">Cookbooks</a>
+                    <Link class="dropdown-item" to="collection">Collection</Link>
                   </div>
                 </li>
 

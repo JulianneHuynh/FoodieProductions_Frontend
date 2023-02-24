@@ -3,6 +3,10 @@ import {UserContext} from "./Context/user";
 import { useNavigate } from "react-router-dom";
 
 export default function EditAccount() {
+
+  document.body.style.backgroundImage = "url('https://media01.stockfood.com/largepreviews/MzgyNDg1NTY0/12338244-Wooden-cutting-board-background-with-seasoning-herbs-and-kitchen-knife-on-wooden-background.jpg')";
+  document.body.style.backgroundRepeat = "no-repeat"
+  document.body.style.backgroundSize = 'cover'
   
   const {user, setUser} = useContext(UserContext)
   const [errors, setErrors] = useState([]);

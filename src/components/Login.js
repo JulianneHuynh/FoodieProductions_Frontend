@@ -1,8 +1,15 @@
 import React, {useState, useContext} from "react";
 import { UserContext } from "./Context/user";
 import {useNavigate} from 'react-router-dom';
+import "./styles.css"
 
 export default function Login() {
+
+  document.body.style.backgroundImage = "url('https://images.squarespace-cdn.com/content/v1/62dd7e7a0005ee6b7fe91846/1659896684599-7NFTEBKW8FVRV6DNAW84/AdobeStock_254631877.jpeg?format=1500w')";
+  document.body.style.backgroundRepeat = "no-repeat"
+  document.body.style.backgroundSize = 'cover'
+
+
   const {user, setUser} = useContext(UserContext)
   const [userData, setUserData] = useState({email:'',password:''})
   const [errors, setErrors] = useState([])
@@ -42,16 +49,20 @@ export default function Login() {
   }
 
   return (
-      <>
+    <div className="login-container">
+      <div className="card">
+        <label>Log into Foodie Production</label>
         <form onSubmit={onSubmit} className='Form-login'>
-          <label>Email</label><br/>
-              <input type="text" name="email" value={email} onChange={handleChange}/><br/>
+          <br/>
+              <input type="text" placeholder="Email address" name="email" value={email} onChange={handleChange}/><br/>
           
-          <label>Password</label><br/>
-              <input type="password" name="password" value={password} onChange={handleChange}/><br/><br/>
+          {/* <label>Password</label> */}
+          <br/>
+              <input type="password" placeholder="Password" name="password" value={password} onChange={handleChange}/><br/><br/>
           
           <input className='Button-signup' type='submit' value='Log in!' />
         </form>
         {errors&&<div>{errors}</div>}
-    </>
+        </div>
+        </div>
   )}

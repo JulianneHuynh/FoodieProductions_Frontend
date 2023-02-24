@@ -6,7 +6,9 @@ import "./styles.css";
 import NavBar from "./NavBar";
 import Home from "./Home";
 import Create from "./Create";
-// import Archive from "./Archive";
+import Archive from "./Archive";
+// import import Creation from "./Creation";
+import Collection from "./Collection";
 import Profile from './Profile';
 import Account from './Account';
 import EditAccount from './EditAccount';
@@ -25,7 +27,9 @@ function App() {
 
         <Route path= "/create" element={<Create/>}/>
     
-        {/* <Route path="/archive" element={<Archive/>}/> */}
+        <Route path="/archive" element={<Archive/>}/>
+        {/* <Route path="/creation" element={<Creation/>}/> */}
+        <Route path="/collection" element={<Collection/>}/>
       
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/account/" element={<Account/>}/>
