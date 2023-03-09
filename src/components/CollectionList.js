@@ -3,7 +3,7 @@ import Search from './Search';
 import CollectionCard from "./CollectionCard"
 import "./styles.css";
 
-function CollectionList({recipes, handleDeleteRecipe}) {  
+function CollectionList({recipes, handleDeleteRecipe, addRecipeToCookbook}) {  
 
   const [search, setSearch] = useState('')
 
@@ -23,21 +23,24 @@ function CollectionList({recipes, handleDeleteRecipe}) {
       ingredients={recipe.ingredients}
       instructions={recipe.instructions}
       handleDeleteRecipe={handleDeleteRecipe}
+      moveRecipe= {addRecipeToCookbook}
       />
       )
     })
 
   return (
+    <center>
     <div className="search-recipe"> 
       <Search 
         search={search}
         setSearch={setSearch}
         />
-
+   
       <div className="cards">
         {recipeCard}
       </div>
     </div>
+    </center>
   );
   }
 

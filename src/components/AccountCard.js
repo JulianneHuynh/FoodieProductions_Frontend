@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./account.css"
 
 export default function AccountCard({id, firstName, lastName, image, email, password, handleEditCard}){
 
@@ -11,6 +12,7 @@ export default function AccountCard({id, firstName, lastName, image, email, pass
   
 
 return (
+  <div className= "account-card">
     <li className="card">
           <div className="account-name"><strong>{firstName}{lastName}</strong></div>   
 
@@ -22,5 +24,6 @@ return (
         {/* <button onClick={editCard} className="emoji-button edit">📝</button> */}
 
     </li>
+    </div>
 );
 }

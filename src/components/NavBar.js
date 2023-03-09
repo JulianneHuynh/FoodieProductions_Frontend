@@ -8,7 +8,7 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className ="Title">Foodie Productions</div> 
-      <img className="title-logo" src="/images/icon.png" alt=''/>
+      <img className="title-logo" src="https://media.tenor.com/CE3zS1_InDQAAAAC/chef-cooking.gif" alt=''/>
           <button 
             className="navbar-toggler" 
             type="button"
@@ -27,12 +27,24 @@ const NavBar = () => {
                   <Link class="nav-link" to="/home">Home <span class="sr-only"></span></Link>
                 </li>
 
-                <li class="nav-item">
-                  <Link class="nav-link" to="/create">Create Recipe</Link>
+                <li class="nav-item dropdown">
+                  <Link 
+                    class="nav-link dropdown" 
+                    to="start_here"  id="navbarDropdown" 
+                    role="button" 
+                    data-toggle="dropdown" 
+                    aria-haspopup="true" 
+                    aria-expanded="false">
+                    Start Here
+                  </Link>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <Link class="dropdown-item" to="create_cookbook">Create Cookbook</Link>
+                    <Link class="dropdown-item" to="create_recipe">Create Recipe</Link>
+                  </div>
                 </li>
 
                 <li class="nav-item dropdown">
-                  <Link 
+                  <a
                     class="nav-link dropdown" 
                     to="archive"  id="navbarDropdown" 
                     role="button" 
@@ -40,9 +52,9 @@ const NavBar = () => {
                     aria-haspopup="true" 
                     aria-expanded="false">
                     Ar-Chives
-                  </Link>
+                  </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Cookbooks</a>
+                    <Link class="dropdown-item" to="my_cookbooks">My Cookbooks</Link>
                     <Link class="dropdown-item" to="collection">Collection</Link>
                   </div>
                 </li>

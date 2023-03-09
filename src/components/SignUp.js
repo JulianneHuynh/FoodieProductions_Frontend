@@ -4,6 +4,9 @@ import {UserContext} from "./Context/user"
 
 
 export default function SignUp() {
+  document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/d3/6d/46/d36d462db827833805497d9ea78a1343.jpg')";
+  document.body.style.backgroundRepeat = "no-repeat"
+  document.body.style.backgroundSize = 'cover'
 
   const {user, setUser} = useContext(UserContext)
   const [errors, setErrors] = useState(null)
@@ -54,7 +57,7 @@ export default function SignUp() {
     setUserData({ ...userData, [name]: value})
   }
   return (
-    <div>
+    <center><div className='card'>
     <>
     <form onSubmit={onSubmit} className='Signup-form'>
 
@@ -78,5 +81,6 @@ export default function SignUp() {
     {errors?errors.map(e => <div>{e[0]+': ' + e[1]}</div>):null}
     </>
     </div>
+    </center>
   )
 }

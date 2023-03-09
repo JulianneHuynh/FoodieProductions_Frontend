@@ -21,6 +21,13 @@
   text-align: center;
 }
 
+
+.card-contaier{
+  padding-left : 5px;
+  padding-right: 2px;
+
+}
+
 .cards {
   padding: 5rem 0;
   list-style: none;
@@ -35,9 +42,10 @@
   box-shadow: 0 0 7px 0 #ddd;
   border-radius: 5px;
   border: 1px solid #ccc;
-  width: 300px;
+  width: 380px;
   
 }
+
 
 .login-card {
   display: flex;
@@ -60,17 +68,23 @@
   width: 200px
 }
 
+.food-photo{
+  height: 220px;
+  width: 330px
+}
+
 
 .btn-group button {
   background-color: #b8d6d9; /*background */
   border: 1px solid rgb(0, 0, 0); /* border */
   color: rgb(13, 145, 239); /* text */
-  padding: 10px 24px; /*padding */
+  padding: 10px 65px; /*padding */
+  padding-left: 10px;
   cursor: pointer; /* Pointer/hand icon */
 }
 
 .btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+  border-right: #333; /* Prevent double borders */
 }
 
 
@@ -79,6 +93,32 @@
 }
 
 #form-container{
-  max-width: 75vw;
+  max-width: 70vw;
+  color:rgb(219, 176, 144)
 
+}
+
+.Cookbook-form{
+  max-width: 65vw;
+  color:rgb(1, 1, 1)
+}
+
+.Start-Here-title{
+  display: flex;
+  justify-content: center;
+  padding-top: 16%;
+  color:#fafafa
+}
+
+/* .Start-Here-cookbook{
+  padding-left: 10%;
+} */
+
+
+.title-MyCookbook{
+  font-size: 29px;
+}
+
+.heart-icon{
+  color: red;
 }

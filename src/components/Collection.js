@@ -5,12 +5,10 @@ import "./Archive.css";
 
 
 export default function Collection() {
+  document.body.style.backgroundImage = "url('https://masureel.com/site/assets/files/22226/goj703_g.jpg')";
 
-  // document.body.style.backgroundImage = "url('https://images.squarespace-cdn.com/content/v1/62dd7e7a0005ee6b7fe91846/1659896684599-7NFTEBKW8FVRV6DNAW84/AdobeStock_254631877.jpeg?format=1500w')";
-  // document.body.style.backgroundRepeat = "no-repeat"
-  // document.body.style.backgroundSize = 'cover'
- 
   const [recipes, setRecipes] = useState([])
+  const [cookbook, setCookbook] = useState([])
  
 
   useEffect(() => {
@@ -24,19 +22,26 @@ export default function Collection() {
     setRecipes(newRecipeArray)
   }
 
+  const addRecipeToCookbook = ( recipe ) => {
+    // console.log('I clicked a recipe:', recipe.name)
+    if ( !cookbook.includes( recipe.id ) )
+      setCookbook([...cookbook, recipe.id])
+  }
 
   return (
+    <center>
     <div className="Collection">
 
       <div id="logo-collection">
-        {/* <img className="title-archive" src="https://thumbs.gfycat.com/SmugCarefulDutchshepherddog-size_restricted.gif"/> */}
           <label className="title-archive"> Recipe Ar-Chives </label>
         <img className="logo-archive" src="https://4.bp.blogspot.com/-OT3bzBnyIBE/XdjFVBpl0OI/AAAAAAAWTjo/2OC5lktiL0cmxTTN8lH3dXH2jFEdkiBjwCLcBGAsYHQ/s1600/AW4046268_22.gif"/>
         </div>
         <CollectionList
             recipes={recipes}
+            addRecipeToCookbook ={addRecipeToCookbook}
             handleDeleteRecipe={handleDeleteRecipe}/>
       </div>
+      </center>
   );
 }
 

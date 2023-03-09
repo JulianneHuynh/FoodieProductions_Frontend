@@ -3,6 +3,9 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 export default function Home() {
+  document.body.style.backgroundImage = "url('https://masureel.com/site/assets/files/22226/goj703_g.jpg')";
+  document.body.style.backgroundRepeat = "no-repeat"
+  document.body.style.backgroundSize = 'cover'
 
   const responsive = {
     superLargeDesktop: {
@@ -26,6 +29,7 @@ export default function Home() {
   
 
   return (
+   
     <div className='Home'>
       <br/>
       <h1>About</h1>
@@ -36,7 +40,7 @@ export default function Home() {
       <br/>
       <br/>
       <Carousel responsive={responsive}>
-      <div className='card'>
+      <div className=''>
         <img 
           style ={{width: 300, height: 200}}
           src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSjC-i-ZuoIsRmXvsG2xFa0MFK4Yav7-IYWFimUbqLtsBz5urgJ"
@@ -44,7 +48,7 @@ export default function Home() {
         />
       </div>
 
-      <div className='card'>
+      <div className=''>
         <img 
           style ={{width: 300, height: 200}}
           src= "https://cdn-bcfmk.nitrocdn.com/fYEZdJKjvuXkKgFpeJrbqdViLvHKUQUB/assets/static/optimized/rev-0154c1e/wp-content/uploads/2017/12/IMG_8529-1024x683.jpg"
@@ -52,7 +56,7 @@ export default function Home() {
         />
       </div>
 
-      <div className='card'>
+      <div className=''>
         <img 
           style ={{width: 300, height: 200}}
           src="https://adthrive.com/wp-content/uploads/2020/02/The-Woks-of-Life-family.jpg"
@@ -60,7 +64,7 @@ export default function Home() {
         />
       </div>
 
-      <div className='card'>
+      <div className=''>
         <img 
           style ={{width: 300, height: 200}}
           src="http://ucanr.edu/blogs/food/blogfiles/69243.jpg"
@@ -68,7 +72,7 @@ export default function Home() {
         />
       </div>
 
-      <div className='card'>
+      <div className=''>
         <img 
           style ={{width: 300, height: 200}}
           src="https://images.squarespace-cdn.com/content/v1/58d1b3ff1b631bb1893d108d/eb410491-651b-49df-9a3c-c388088c3304/P7121975+%281%29.jpg"
@@ -76,7 +80,7 @@ export default function Home() {
         />
       </div>
 
-      <div className='card'>
+      <div className=''>
         <img 
           style ={{width: 300, height: 200}}
           src="https://cms-tc.pbskids.org/parents/What-Are-Your-Favorite-Family-Traditions.jpg"
@@ -85,6 +89,7 @@ export default function Home() {
       </div>
       </Carousel>
     </div>
+  
   )
 }
 

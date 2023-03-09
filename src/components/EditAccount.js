@@ -66,7 +66,7 @@ export default function EditAccount() {
   }
 
   return(
-    <div>
+    <center><div className="card">
       <h1>Edit Account</h1>
 
 
@@ -90,5 +90,6 @@ export default function EditAccount() {
                 <button type='submit'>Save Changes</button>
             </form>
       </div>
+      </center>
   )
 }

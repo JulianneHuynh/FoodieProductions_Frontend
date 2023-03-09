@@ -1,6 +1,6 @@
 import React, {useState, useContext} from "react";
 import { UserContext } from "./Context/user";
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, Link} from 'react-router-dom';
 import "./styles.css"
 
 export default function Login() {
@@ -61,6 +61,13 @@ export default function Login() {
               <input type="password" placeholder="Password" name="password" value={password} onChange={handleChange}/><br/><br/>
           
           <input className='Button-signup' type='submit' value='Log in!' />
+          <br/>
+          
+
+          <span className='account_link'>👨‍🍳<Link to='signup'>Sign Up Here!👨‍🍳</Link></span>
+          
+
+          
         </form>
         {errors&&<div>{errors}</div>}
         </div>

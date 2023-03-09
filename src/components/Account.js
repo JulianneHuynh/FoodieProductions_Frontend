@@ -5,7 +5,7 @@ import {useNavigate, Link} from 'react-router-dom';
 
 export default function Account() {
 
-    document.body.style.backgroundImage = "url('https://img.freepik.com/premium-photo/square-wooden-cutting-board-with-edging-cherry-tomatoes-slices-cheese-spices-white-background-mockup-with-copy-space-text-top-view_172990-904.jpg?w=2000')";
+    document.body.style.backgroundImage = "url('http://cdn.shopify.com/s/files/1/1728/9189/products/teak_cutting_board_stock1.01_1200x1200.jpg?v=1624477680')";
     document.body.style.backgroundRepeat = "no-repeat"
     document.body.style.backgroundSize = 'cover'
     
@@ -71,7 +71,7 @@ export default function Account() {
             <h3>{user.password}</h3>
         </div>
 
-        <div class="btn-group">
+        <div className="btn-group">
         <div className='edit-button'>
             <button>
             <Link className='edit-link' type='button' to="/edit_account">Edit </Link>
